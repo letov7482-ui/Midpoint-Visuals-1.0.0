@@ -8,11 +8,10 @@ public class WatermarkModule extends BaseModule {
     }
 
     @Override
-    public void render() {
-        if (!enabled || mc.player == null) return;
-        // Отрисовка водяного знака
+    public void render(DrawContext context) {
+        if (!enabled) return;
         String text = "Midpoint Visuals";
-        int color = 0xFFAAFF; // фиолетовый
-        mc.textRenderer.draw(text, 5, 5, color, true);
+        int color = 0xFFAAFF;
+        context.drawText(mc.textRenderer, text, 5, 5, color, true);
     }
 }

@@ -3,7 +3,7 @@
   "id": "midpoint",
   "version": "1.0.0",
   "name": "Midpoint Visuals",
-  "description": "Визуальный клиент для Fabric 1.21.4",
+  "description": "Visual client for Fabric 1.21.4",
   "authors": ["Midpoint"],
   "environment": "client",
   "entrypoints": {
@@ -11,7 +11,6 @@
   },
   "depends": {
     "fabricloader": ">=0.15.0",
-    "minecraft": "1.21.4",
-    "fabric-api": "*"
+    "minecraft": "1.21.4"
   }
 }

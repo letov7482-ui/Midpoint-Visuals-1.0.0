@@ -1,6 +1,7 @@
 package me.midpoint.modules;
 
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gui.DrawContext;
 
 public abstract class BaseModule {
     protected MinecraftClient mc = MinecraftClient.getInstance();
@@ -11,7 +12,7 @@ public abstract class BaseModule {
     public BaseModule(String name, int keyBind) {
         this.name = name;
         this.keyBind = keyBind;
-        this.enabled = false;
+        this.enabled = true; // по умолчанию включён для теста
     }
 
     public void toggle() {
@@ -23,5 +24,5 @@ public abstract class BaseModule {
     public void onEnable() {}
     public void onDisable() {}
     public void tick() {}
-    public void render() {}
+    public void render(DrawContext context) {}
 }
